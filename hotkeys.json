@@ -15,5 +15,23 @@
       ],
       "key": "A"
     }
+  ],
+  "tasknotes:create-or-open-task": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "A"
+    }
+  ],
+  "notebook-navigator:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": ","
+    }
   ]
 }

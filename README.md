@@ -18,6 +18,9 @@
 ├── .obsidian-config/          # 共享配置模板（Git 托管）
 │   ├── .git/                  # Git 仓库
 │   ├── .gitignore
+│   ├── README.md              # 本文档
+│   ├── docs/                  # 设计文档
+│   │   └── vault-design.md
 │   ├── core-plugins.json      # 核心插件配置
 │   ├── community-plugins.json # 社区插件列表
 │   ├── hotkeys.json           # 快捷键配置
@@ -27,8 +30,12 @@
 │   └── plugins/               # 共享插件
 │       ├── claudian/
 │       ├── editing-toolbar/
+│       ├── notebook-navigator/
 │       ├── obsidian-tasks-plugin/
-│       └── ...
+│       ├── obsidian42-brat/
+│       ├── omnisearch/
+│       ├── tasknotes/
+│       └── url-into-selection/
 │
 ├── mems-garden/               # 个人知识库
 │   └── .obsidian/
@@ -59,7 +66,7 @@
 | 快捷键 | `hotkeys.json` | ✅ 符号链接共享 |
 | 关系图 | `graph.json` | ✅ 符号链接共享 |
 | 主题文件 | `themes/` | ✅ 符号链接共享 |
-| 插件代码 | `plugins/` | ✅ 符号链接共享 |
+| 插件代码 | `plugins/` | ⚠️ 部分私有（见下方） |
 | 主题选择 | `appearance.json` | 🔒 私有（每个库可设置不同主题） |
 | 工作区布局 | `workspace.json` | 🔒 私有 |
 | 每日笔记 | `daily-notes.json` | 🔒 私有 |
@@ -67,6 +74,25 @@
 | 类型定义 | `types.json` | 🔒 私有 |
 
 **设计原则**：视觉相关配置（如主题）保持私有，便于快速区分不同库；功能性配置共享，减少重复工作。
+
+### 共享插件列表
+
+| 插件 | 说明 |
+|------|------|
+| `claudian` | Claude AI 集成 |
+| `editing-toolbar` | 编辑工具栏 |
+| `notebook-navigator` | 笔记本导航 |
+| `obsidian-tasks-plugin` | 任务管理 |
+| `obsidian42-brat` | BRAT 插件（用于安装测试版插件） |
+| `omnisearch` | 全文搜索 |
+| `tasknotes` | 任务笔记（每个任务一个笔记） |
+| `url-into-selection` | URL 转选中文本 |
+
+### 私有插件
+
+| 插件 | 说明 |
+|------|------|
+| `obsidian-style-settings` | 主题样式设置（每个库独立配置） |
 
 ## 仓库信息
 
@@ -221,3 +247,5 @@ git reset --hard origin/main
 
 - **2026-03-10**: 初始化方案，创建双库配置共享架构
 - 包含 8 个社区插件和 1 个主题的共享配置
+- **2026-03-10**: 更新插件列表，添加 tasknotes 插件
+- 添加 vault-design.md 设计文档
